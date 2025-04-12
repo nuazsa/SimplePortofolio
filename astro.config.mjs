@@ -1,10 +1,9 @@
 import { defineConfig } from 'astro/config';
-import 'dotenv/config'
+import 'dotenv/config';
 
-const base = process.env.BASE ?? '/isonnymichael.github.io';
+const isDev = process.env.NODE_ENV === 'development';
+const base = isDev ? '/' : (process.env.BASE);
 
-// https://astro.build/config
 export default defineConfig({
-    site: 'https://isonnymichael.github.io',
-    base: base,
+  base: base,
 });

@@ -5,10 +5,9 @@ interface Props {
 	about: string;
 	stacks: Array<string>;
 	website: string;
-	github: string;
 }
 
-const { title, img, about, stacks, website, github } = Astro.props;
+const { title, img, about, stacks, website } = Astro.props;
 ---
 
 <div class="col-12 col-sm-4">
@@ -34,7 +33,6 @@ const { title, img, about, stacks, website, github } = Astro.props;
 				<span class="d-block mb-1">{s}</span>
 			))}</p>
 			<p class="website-data">{website}</p>
-			<p class="github-data">{github}</p>
 		</div>
 
 	</div>
